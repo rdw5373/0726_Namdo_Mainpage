@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+/* Reset 시작 */
+* {
+  color: #333;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+a:link {
+  color: #444;
+}
+a:visited {
+  color: #444;
+}
+a:hover {
+  color: #555;
+}
+a:active {
+  color: #555;
+}
+
+img {
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex-container {
+  display: flex;
+}
+
+header,
+nav,
+main,
+section,
+article,
+aside,
+footer {
+  display: block;
+}
+/* Reset 끝 */
+
+/* Guide Line 시작*/
+div#wrap {
+  border: 1px solid #000;
+}
+header#header {
+  border: 1px solid #000;
+}
+main#main {
+  border: 1px solid #000;
+}
+div#slide {
+  border: 1px solid #000;
+}
+div#contents {
+  border: 1px solid #000;
+}
+footer#footer {
+  border: 1px solid #000;
+}
+/* Guide Line 끝 */
+
+/* div#wrap 시작 */
+div#wrap {
+  width: 1000px;
+  margin: 10px;
+}
+/* div#wrap 끝 */
+
+/* header#header 시작 */
+header#header {
+  width: 200px;
+}
+
+/* nav#gnb 시작 */
+nav#gnb {
+  /* border: 1px solid #000; */
+}
+
+#gnb > ul#mainMenu {
+  padding: 10px;
+  /* border: 1px solid #08f; */
+  margin: 10px;
+
+  /* 세로2열 적용 122번 줄과 연계됨*/
+  position: relative;
+}
+
+#gnb #mainMenu > li {
+  text-align: center;
+  /* border: 1px solid #f80; */
+}
+
+#gnb a {
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #aaa;
+  display: inline-block;
+}
+#gnb .mainLi > a {
+  /* 메인메뉴와 서브메뉴 구분 */
+  height: 50px;
+  font-size: 17px;
+  line-height: 50px;
+}
+
+#gnb ul.subMenu {
+  display: none;
+  /* position: relative; 1열에서 적용함 */
+
+  /* 2열일 경우 적용할 소스 줄번호 130 까지 적용*/
+  position: absolute;
+  left: 163px;
+  top: 0;
+}
+#gnb ul.subMenu li:last-child a {
+  padding-bottom: 160px;
+}
+
+#gnb .mainLi:hover > a {
+  color: #fff;
+  background-color: rgba(225, 190, 255, 0.9);
+}
+
+/* 서브메뉴 하이라이트 역상 적용  시작 */
+#gnb .subLi a {
+  color: #fff;
+  background-color: rgba(225, 190, 255, 0.4);
+}
+#gnb .subLi a:hover {
+  color: #444;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+/* 서브메뉴 하이라이트 역상 적용  끝 */
+
+/* nav#gnb 끝 *
+/* header#header 끝 */
+
+/* main#main 시작 */
+main#main {
+  flex: 1;
+}
+/* main#main 끝 */
+
+/* div#slide 시작 */
+div#slide {
+  height: 350px;
+}
+/* div#slide 끝 */
+
+/* div#contents 시작 */
+div#contents {
+  height: 200px;
+}
+#main #contents > * {
+  flex: 1;
+}
+/* div#contents 끝 */
+
+/* footer#footer 시작 */
+#main footer#footer {
+  height: 100px;
+}
+/* footer#footer 끝 */
