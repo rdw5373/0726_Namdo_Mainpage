@@ -50,7 +50,7 @@ footer {
 /* Reset 끝 */
 
 /* Guide Line 시작*/
-div#wrap {
+/* div#wrap {
   border: 1px solid #000;
 }
 header#header {
@@ -67,7 +67,7 @@ div#contents {
 }
 footer#footer {
   border: 1px solid #000;
-}
+} */
 /* Guide Line 끝 */
 
 /* div#wrap 시작 */
@@ -142,6 +142,7 @@ nav#gnb {
   position: absolute;
   left: 168px;
   top: 0px;
+  z-index: 1;
 }
 
 #gnb li.subLi:last-child a {
@@ -206,7 +207,7 @@ div#contents {
 }
 #main #contents > * {
   padding: 20px 4px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 /* #main #bbsNotice 시작 */
@@ -271,6 +272,108 @@ div#contents {
 #main footer#footer {
   height: 100px;
 }
+#main #footer div#rightArea {
+  flex: 1;
+}
+
+/* div#footerLogo 시작 */
+#footer div#footerLogo a {
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  display: inline-block;
+}
+/* div#footerLogo 끝 */
+
+/* nav#footerMain 시작 */
+
+#footer #footerMain li {
+  /* border: 1px solid #000; */
+
+  float: left;
+}
+#footer #footerMain li:first-child {
+  margin-left: 34px;
+}
+#footer #footerMain::before {
+  content: "";
+  height: 50px;
+  /* border: 1px solid #000; */
+  display: inline-block;
+}
+#footer #footerMain a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  /* border: 1px solid #000; */
+  display: inline-block;
+}
+
+/* nav#footerMain 끝 */
+
+/* div#copyright 시작 */
+div#copyright {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  /* border: 1px solid #f00; */
+}
+/* div#copyright 끝 */
+
 /* footer#footer 끝 */
 
 /* main#main 끝 */
+
+/* 레이어팝업 시작 */
+tr#popPoint {
+  cursor: pointer;
+}
+
+div#layerBG {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0);
+
+  display: none;
+}
+
+div#layerPopup {
+  padding: 30px;
+  border: 4px solid #aaa;
+  border-radius: 10px;
+
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#layerPopup h1 {
+  text-align: center;
+}
+
+#layerBG ol {
+  font-size: 20px;
+  line-height: 36px;
+  margin: 20px 0;
+
+  list-style-position: inside;
+}
+#layerBG ol span {
+  text-indent: 110px;
+  display: inline-block;
+}
+#layerPopup div#closeBtnArea {
+  text-align: right;
+}
+
+#layerPopup button {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 2px 14px;
+}
+/* 레이어팝업 끝 */

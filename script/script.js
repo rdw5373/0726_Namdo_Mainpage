@@ -71,4 +71,17 @@ $(function(){
      }
       // SlideShow 끝 (교차 전환형)
 
+
+
+     // 레이어 팝업 시작
+    $("tr#popPoint").click(function(){
+        $("div#layerBG").css("display", "block");
+    });
+    $("#closeBtnArea>button").click(function(){
+        $("div#layerBG").css("display", "none");
+    });
+    // 레이어 팝업 끝
+
+    
+
 }); //에밋
